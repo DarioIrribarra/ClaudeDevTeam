@@ -57,8 +57,20 @@ O a mano:
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\equipo"; Copy-Item .\SKILL.md,.\instalar.md "$env:USERPROFILE\.claude\skills\equipo\"
 ```
 
+**Después de instalar hay que recargar.** Claude Code lee las skills al arrancar, así
+que una pestaña de chat nueva no basta: hay que reiniciar el proceso.
+
+- VS Code: `Ctrl+Shift+P` → **Developer: Reload Window**.
+- App de escritorio: abrir una sesión nueva.
+
+Si `/equipo` no aparece en el menú de comandos, escribe `modo equipo` en el chat: la
+skill se dispara por su descripción, no solo por el slash.
+
 Después, en cualquier proyecto: `/equipo`. La primera vez monta el equipo; de ahí en
 adelante enruta tareas.
+
+La carpeta `~\.claude\` es compartida entre VS Code y la app de escritorio, así que se
+instala una sola vez por usuario de Windows.
 
 ## Cómo repartirla al equipo
 
